@@ -21,4 +21,4 @@ Work in progress...................
 4. Calculating indexes for symbols and load as gold layer
 5. Visualizing data
 
-!["azure etl pipleline"](/static/etl-azure.png)
+!["azure etl pipleline"](/docs/etl-azure.png)
