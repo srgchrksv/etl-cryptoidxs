@@ -28,10 +28,15 @@ EMA smooths price and RSI is ranging from 0 to 100 so we are getting  standartiz
 1. Getting historical data from binance api
 2. Loading raw in bronze storage layer
 3. Adding schema and loading as silver layer
-***
-Work in progress...................
-***
 4. Calculating indexes for symbols and load as gold layer
-5. Exploratory data analysis
+5. Calculate correlations
+6. Visualize data
 
+### Correlations 
+!["correlations"](/docs/correlations.png)
+
+### Line plot
+!["lineplot"](/docs/lineplot.png)
+
+### Services used
 !["azure etl pipleline"](/docs/etl-azure.png)
