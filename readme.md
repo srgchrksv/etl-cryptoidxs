@@ -11,7 +11,7 @@
 - BNBBTC
  
 
-### Looking to calculate Relative Strength Index of Exponential Moving Average for each pair and then use this formula to get the indexes:
+### Looking to calculate Relative Strength Index for each pair and then use this formula for currency indexes:
 
 | Currency | Calculation                                |
 |----------|--------------------------------------------|
@@ -20,7 +20,7 @@
 | BNB      | (BNBUSDT + BNBETH +  BNBBTC) / 3        |
 | USDT     | ((100 - BTCUSDT) + (100 - ETHUSDT) + (100 - BNBUSDT)) / 3 |
 
-EMA smooths price and RSI is ranging from 0 to 100 so we are getting  standartized indexes.
+RSI is ranging from 0 to 100 so we are getting standartized indexes.
 
 *The same way we can calculate indexes for forex currencies*
 
