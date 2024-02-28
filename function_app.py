@@ -2,9 +2,9 @@ import requests
 import azure.functions as func
 import logging
 
-from storage import storage_connection
-from helpers import assert_fresh_data
-from silver import silver_layer_transformation
+from packages.storage import storage_connection
+from packages.dataquality import assert_fresh_data
+from packages.transform import silver_layer_transformation
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
@@ -50,7 +50,9 @@ def get_data(req: func.HttpRequest) -> func.HttpResponse:
         # Silver layer transform - add schema and load as parquet to storage
         blob_name_to_write = f"layers/silver/{symbol}.parquet"
         buffer = silver_layer_transformation(response.content, symbol)
-        container_client.upload_blob(name=blob_name_to_write, data=buffer, overwrite=True)
+        container_client.upload_blob(
+            name=blob_name_to_write, data=buffer, overwrite=True
+        )
         msg = f"Parquet df for {symbol} uploaded successfully to {blob_name_to_write} in {container_name} container."
         logging.info(msg)
 
